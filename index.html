@@ -5,43 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta CEP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./src/img/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
     <div class="container">
         <h1>Consulte seu CEP</h1>
         <form>
-            <div class="form-group">
-                <label for="cep">CEP</label>
-                <input type="text" class="form-control" id="cep">
-                <small>00000-000</small>
+            <div class="form-group cep">
+                <input type="text" placeholder="Digite seu CEP" class="form-control" id="cep" minlength="8" maxlength="8">
             </div>
 
-            <div class="form-group">
-                <label for="logradouro">Logradouro</label>
-                <input type="text" class="form-control" id="logradouro">
-                <small></small>
+            <div class="result">
+
+                <div class="form-group">
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" class="form-control" id="logradouro">
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro">
+                </div>
+
+                <div class="form-group">
+                    <label for="localidade">Localidade:</label>
+                    <input type="text" class="form-control" id="localidade">
+                </div>
+                
+                <div class="form-group">
+                    <label for="uf">UF:</label>
+                    <input type="text" class="form-control" id="uf">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="bairro">Bairro</label>
-                <input type="text" class="form-control" id="bairro">
-                <small></small>
+            <div class="container-result-invalid">
+                <h1 class="result-invalid">fdsfds</h1>
             </div>
 
-            <div class="form-group">
-                <label for="localidade">Localidade</label>
-                <input type="text" class="form-control" id="localidade">
-                <small></small>
-            </div>
-            
-            <div class="form-group">
-                <label for="uf">UF</label>
-                <input type="text" class="form-control" id="uf">
-                <small></small>
-            </div>
-            
         </form>
+
+        
+            <div class="container-button">
+                <button id="button">Consultar CEP</button>
+            </div>
+
+
+
     </div>
     
     <script src="./src/js/script.js"></script>
